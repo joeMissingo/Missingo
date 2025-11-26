@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Galeria Premium</title>
+
+<style>
+/* Background animado com efeito neon */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    background: linear-gradient(120deg, #0f0c29, #302b63, #24243e);
+    background-size: 300% 300%;
+    animation: gradientBG 12s ease infinite;
+}
+
+/* Animação do fundo */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Título com brilho neon */
+.titulo {
+    color: #fff;
+    margin: 30px 0;
+    font-size: 42px;
+    text-shadow: 0 0 12px #8d74ff, 0 0 25px #b9a3ff;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+
+/* Galeria */
+.galeria {
+    width: 90%;
+    max-width: 1100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+.galeria-view{
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+/* Card da imagem */
+.item {
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: transform .4s;
+    box-shadow: 0 0 15px rgba(255,255,255,0.1);
+}
+
+/* Efeito 3D ao passar o mouse */
+.item:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 0 20px #a387ff, 0 0 40px #cbb8ff;
+}
+
+/* Imagem */
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: .3s ease-in-out;
+}
+
+.item:hover img {
+    filter: brightness(1.15);
+}
+</style>
+
+</head>
+<body>
+
+    <header>
+    <h1>Missingo</h1>
+
+    <div class="topnav" id="myTopnav">
+     <a href="#">Inicio</a>
+      <a href="#sobre">Sobre</a>
+      <a href="projeto.html">Projetos</a>
+      <a href="contactos.html">Contatos</a>
+      <a href="Galeria.html">Galeria</a>
+      <a href="habilidades.html">Habilidades</a>
+
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+   </div>
+  </header>
+   
+<div class="galeria-view">
+    <div class="galeria">
+        <div class="item"><img src="joe9.jpg"></div>
+        <div class="item"><img src="joe8.jpg"></div>
+        <div class="item"><img src="joe3.jpg"></div>
+        <div class="item"><img src="joe1.jpg"></div>
+        <div class="item"><img src="joe2.jpg"></div>
+        <div class="item"><img src="joe5.jpg"></div>
+        <div class="item"><img src="joe4.jpg"></div>
+        <div class="item"><img src="joe6.jpg"></div>
+    </div>
+
+<nav>
+    <script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+</body>
+</html>
